@@ -4,9 +4,8 @@ import time
 from datetime import datetime
 from .ui_helper import save_username_to_file
 
-stamp = datetime.now()
-user = "user" + str(stamp)
-save_username_to_file(user)
+
+
 class BlazeLocators:
     SIGN_IN_BUTTON = (By.ID, "login2")
     SIGN_IN_USERNAME = (By.ID, 'loginusername')
@@ -42,14 +41,12 @@ class BlazeLocators:
     SIGN_UP_CONFIRM = (By.XPATH,'//button[text() = "Sign up"]')
 
 class BlazeHelpers(BasePage):
-    def sign_up(self):
-        stamp = datetime.now()
-        user = "user" + str(stamp)
+    def sign_up(self,username, password):
         self.go_home_page()
         self.go_home_page()
         self.find_element(BlazeLocators.SIGN_UP_BUTTON).click()
-        self.find_element(BlazeLocators.SIGN_UP_LOGIN).send_keys(user)
-        self.find_element(BlazeLocators.SIGN_UP_PASS).send_keys(user)
+        self.find_element(BlazeLocators.SIGN_UP_LOGIN).send_keys(username)
+        self.find_element(BlazeLocators.SIGN_UP_PASS).send_keys(password)
         self.find_element(BlazeLocators.SIGN_UP_CONFIRM).click()
         time.sleep(4)
         self.accept_alert()

@@ -30,13 +30,3 @@ def browser(request):
 
     yield driver
     driver.quit()
-
-
-# import pytest
-# from selenium import webdriver
-#
-# @pytest.fixture(scope="session")
-# def browser():
-#     driver = webdriver.Firefox(executable_path=r'E:\drivers\geckodriver.exe')
-#     yield driver
-#     driver.quit()

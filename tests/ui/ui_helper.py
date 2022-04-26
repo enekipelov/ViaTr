@@ -1,13 +1,17 @@
 import json
-import os
-from pathlib import Path
+import string
+import random
 
-def save_username_to_file(username):
-    p = 'E:/dd/ViaTr/tests/user.json'
-    with open(p,"r") as jsonFile:
+def save_username_to_file(username, path_to_file):
+    with open(path_to_file,"r") as jsonFile:
         data = json.load(jsonFile)
 
     data["username"] = username
 
-    with open("user.json", "w") as jsonFile:
+    with open(path_to_file, "w") as jsonFile:
         json.dump(data, jsonFile)
+
+def unique_user():
+    characters = string.ascii_letters + string.digits
+    stamp = ''.join(random.choice(characters) for i in range(8))
+    return 'user' + str(stamp)

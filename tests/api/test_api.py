@@ -2,12 +2,12 @@ from . import api
 from .api_helper import get_username_from_file
 
 API_URL = 'https://api.demoblaze.com/'
+PATH_TO_FILE = 'E:/dd/ViaTr/tests/user.json'
 ITEM_ID = '3'
-LOGIN = get_username_from_file()
+LOGIN = get_username_from_file(PATH_TO_FILE)
 PASSWORD = '111'
 
 def test_add_item_to_cart():
-    print(LOGIN)
     token = api.login_api(api_url=API_URL, username=LOGIN, password=PASSWORD)
     api.add_to_cart(api_url=API_URL, token=token, product_id=ITEM_ID)
 
