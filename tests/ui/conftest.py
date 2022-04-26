@@ -3,7 +3,7 @@ from selenium import webdriver
 
 
 def pytest_addoption(parser):
-    parser.addoption("--browser",default="firefox", choices=["chrome", "firefox", "ie"], help="Choose browser")
+    parser.addoption("--browser", default="firefox", choices=["chrome", "firefox", "ie"], help="Choose browser")
     parser.addoption("--baseurl", default="https://demoblaze.com/")
 
 
