@@ -2,10 +2,11 @@ from tests.logger.logger import get_logger
 from tests.ui.page_objects.LoginPage import LoginPage
 from tests.ui.page_objects.CartPage import CartPage
 from tests.ui.helpers.ui_helper import save_username_to_file, unique_user
-
+"""
+PATH_TO_FILE should be specified on each env
+"""
 USER = unique_user()
 PASSWORD = '111'
-# in PATH_TO_FILE stored username for login in API tests
 PATH_TO_FILE = 'E:/dd/ViaTr/tests/user.json'
 save_username_to_file(USER, PATH_TO_FILE)
 
