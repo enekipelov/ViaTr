@@ -2,6 +2,7 @@ from tests.logger.logger import get_logger
 from tests.ui.page_objects.LoginPage import LoginPage
 from tests.ui.page_objects.CartPage import CartPage
 from tests.ui.helpers.ui_helper import save_username_to_file, unique_user
+
 """
 PATH_TO_FILE should be specified on each env
 """

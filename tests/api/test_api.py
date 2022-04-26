@@ -2,11 +2,11 @@ from . import api
 from .api_helper import get_username_from_file
 from tests.logger.logger import get_logger
 
-API_URL = 'https://api.demoblaze.com/'
 """
 PATH_TO_FILE should be specified on each env
 """
 PATH_TO_FILE = 'E:/dd/ViaTr/tests/user.json'
+API_URL = 'https://api.demoblaze.com/'
 ITEM_ID = '3'
 LOGIN = get_username_from_file(PATH_TO_FILE)
 PASSWORD = '111'
